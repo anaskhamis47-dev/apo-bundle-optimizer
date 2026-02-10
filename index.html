@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apo Bundle Optimizer | AI Inventory Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* إعدادات الألوان والخطوط */
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-green: #10b981;
+            --accent-blue: #3b82f6;
+            --text-light: #e2e8f0;
+            --text-dim: #94a3b8;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        /* --- تصميم الهيدر بالصورة الخلفية --- */
+        header.hero-section {
+            text-align: center;
+            padding: 120px 20px 80px;
+            /* صورة خلفية لصيدلية مودرن مع طبقة تغميق */
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)),
+                        url('https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        h1.hero-title {
+            font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;
+            background: linear-gradient(to right, var(--accent-green), var(--accent-blue));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        p.hero-subtitle {
+            font-size: 1.3rem; color: var(--text-light); opacity: 0.9;
+            max-width: 750px; margin: 0 auto 40px;
+        }
+        .btn-download-fancy {
+            display: inline-block; padding: 18px 45px;
+            font-size: 1.1rem; font-weight: 600; color: white; text-decoration: none;
+            background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-download-fancy:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);
+        }
+
+        /* --- قسم جديد: صورة وكلام --- */
+        .split-section {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 100px 20px;
+        }
+        .split-text { flex: 1; }
+        .split-image { flex: 1; }
+        .split-image img {
+            width: 100%;
+            border-radius: 25px;
+            /* تأثير ظل وإضاءة للصورة */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 2px solid rgba(16, 185, 129, 0.1);
+        }
+        h2.section-title {
+            font-size: 2.2rem; margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        /* --- قسم الكروت --- */
+        .features-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin-bottom: 80px;
+        }
+        .feature-card {
+            background: var(--bg-card); padding: 35px;
+            border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            border-color: var(--accent-green); transform: translateY(-5px);
+        }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 20px; }
+        .feature-card h3 { font-size: 1.3rem; margin-bottom: 15px; color: var(--accent-green); }
+        .feature-card p { color: var(--text-dim); }
+
+        /* --- الفوتر --- */
+        footer {
+            text-align: center; padding: 40px; color: var(--text-dim);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* تجاوب مع الموبايل */
+        @media (max-width: 768px) {
+            .split-section { flex-direction: column-reverse; text-align: center; }
+            h1.hero-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Apo Bundle Optimizer</h1>
+            <p class="hero-subtitle">
+                The AI-driven <strong>Smart Pharmacy Manager</strong> designed for modern German pharmacies. 
+                Turn expiring stock into profit.
+            </p>
+            <a href="apo_bundle_project.exe" class="btn-download-fancy">
+                 Download for Windows (v1.0) ⬇️
+            </a>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #ffffffaa;">
+                🐧 Linux Users: Cross-platform Rust code, compile with <code>cargo build</code>.
+            </p>
+        </div>
+    </header>
+
+    <section class="container split-section">
+        <div class="split-text">
+            <h2 class="section-title">Empowering Pharmacists with AI</h2>
+            <p style="font-size: 1.1rem; color: var(--text-dim);">
+                In the fast-paced environment of a German "Apotheke", efficiency is key. 
+                Our tool integrates seamlessly into your workflow, using smart algorithms to identify sales opportunities before products expire.
+            </p>
+            <p style="font-size: 1.1rem; color: var(--text-dim); margin-top: 15px;">
+                Focus on your patients, and let <strong>Apo Optimizer</strong> handle the inventory intelligence.
+            </p>
+        </div>
+        <div class="split-image">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1000&auto=format&fit=crop" alt="Pharmacist using digital tools">
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Intelligent Bundling</h3>
+                <p>Advanced logic to group near-expiry items into attractive health kits.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Rust Powered</h3>
+                <p>High-performance, memory-safe code tailored for professional environments.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Profit Recovery</h3>
+                <p>Turn potential total losses into revenue by optimizing price points.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Digital Business Project | DIT - Deggendorf Institute of Technology</p>
+        <p style="opacity: 0.7;">Developed by Anas Khamis | Pharmacy & Health Informatics</p>
+    </footer>
+
+</body>
+</html>
