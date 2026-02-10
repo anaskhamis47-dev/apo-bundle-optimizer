@@ -1,0 +1,25 @@
+name: Build for Linux & Windows
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+
+    - name: Build for Linux
+      run: cargo build --release --verbose
+
+    - name: Upload Linux Binary
+      uses: actions/upload-artifact@v3
+      with:
+        name: apo_bundle_optimizer_linux
+        path: target/release/apo_bundle_project
